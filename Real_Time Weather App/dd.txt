@@ -1,0 +1,15 @@
+IF city is entered:
+    CALL forecast API with city name
+    RECEIVE JSON with 5-day data (3-hour intervals)
+
+    CREATE empty dictionary daily_temps
+
+    FOR each forecast entry in JSON:
+        GET date from dt_txt
+        GET temperature from main.temp
+        ADD temperature to that date’s list in daily_temps
+
+    FOR each date in daily_temps:
+        CALCULATE average temperature
+
+    PLOT line chart with date vs average temperature
